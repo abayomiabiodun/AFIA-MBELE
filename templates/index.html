@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Titile -->
+        
+        <title>Afia mbele</title>
+
+        <!-- meta -->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+        <!-- popin -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+        <!-- font awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+
+        <!-- Hero section -->
+
+        <section id="hero">
+        <!-- nav -->
+
+            <nav class="navigation">
+
+                <!-- logo -->
+                <a href="#" class="logo"> <span>Afia</span> Mbele</a>
+
+                <!-- menu -->
+
+                <ul class="menu">
+                    <li><a href="#">Find Hospital</a></li>
+                    <li><a href="#">Best Insurrance</a></li>
+                    <li><a href="#">Emmergency</a></li>
+                   
+                </ul>
+
+                <!-- login button -->
+                <a href="#" class="nav-appointement-btn">Sign in</a>
+
+            </nav>
+            <!-- End nav -->
+
+            <!-- content -->
+            <div class="hero-content">
+
+                <!-- text -->
+                  <div class="hero-text">
+                        <h1>Afia mbele </br> Your health our priority</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque maiores modi et fugiat cum excepturi facere nihils</p>
+
+                    <!-- boutons -->
+                        <div class="hero-text-btns">
+                            <a href="#">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Find hospital
+                            </a>
+                            <a href="#">
+                                <i class="fa-solid fa-suitcase-medical"></i>
+                                Insurance support
+                            </a>
+                        </div>
+                  </div>
+                  <!-- end text -->
+
+                  <!-- images -->
+
+                  <div class="hero-img">
+                    <img src="{% static 'images/hospital5.png' %}" alt="hospital">
+                  </div>
+
+            </div>
+          
+            <!-- End content -->
+        
+        </section> 
+
+        <!-- End hero -->
+
+        <!-- search -->
+
+        <div class="appointment-search-container">
+            <h3>
+                Find Best HealthCare
+            </h3>
+
+            <!-- search -->
+            <div class="appointment-search">
+
+                <!-- search box -->
+                <div class="appo-search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search hospital">
+                </div>
+                <div class="appo-search-box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Set Your location">
+                </div>
+                <!-- button -->
+
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            
+
+           
+
+        </div>
+
+
+     
+        
+        <script src="" async defer></script>
+    </body>
+</html>
