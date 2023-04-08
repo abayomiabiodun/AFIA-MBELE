@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="{% static '/css/stylee.css' %}">
 
         <!-- popin -->
 
@@ -61,7 +61,7 @@
 
                 <!-- text -->
                   <div class="hero-text">
-                        <h1>Afia mbele </br> Your health our priority</h1>
+                        <h1>Afia mbele <br/> Your health our priority</h1>
                         <p>We bring together the best services and sanitary products to provide you with flawless support and well-being on a daily basis.</p>
 
                     <!-- boutons -->
@@ -240,6 +240,12 @@
 
                 </div>
 
+                <!-- btns -->
+                <div class="services-slide-btns">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+
             </div>
 
             <!-- box container -->
@@ -249,24 +255,27 @@
 
                 <div class="swiper mySwiperServices">
                     <div class="swiper-wrapper">
+                        {% for service in Services %}
                         <div class="swiper-slide">
-
+                           
                              <!-- box1 -->
-                            <div class="service-box s-box1">
+                            <div class="service-box s-box{{service.id}}">
                                 <!-- icon -->
                                 <i class="fa-solid fa-tooth"></i>
 
                                 <!-- title -->
-                                <strong>Dental Clinic</strong>
+                                <strong>{{service.service_name}}</strong>
                                 <!-- details -->
-                                <p>Lorem ipsum dolor sit, amet consectetur </p>
+                                <p>{{service.service_description}}</p>
 
                                 <!-- btn -->
 
                                 <a href="#">Read More</a>
 
                             </div>
+                           
                       </div>
+                      {% endfor %}
                       <div class="swiper-slide">
                                     <!-- box2 -->                  
                                
@@ -366,9 +375,110 @@
               
       
             </div>
+
+            <span class="service-help-btn">There are even more, only one click  here to visit all the hospitals in our network <a href=""> Get Start </a></span>
         </section>
+             <!-- why choose us -->
+        <section id="why-choose-us">
+            <!-- left -->
+            <div class="why-choose-us-left">
+                <h3>Why choose us?</h3>
 
+                <!-- container -->
 
+                <div class="why-choose-box-container">
+
+                    <!-- box -->
+                    <div class="why-choose-box">
+                        <!-- icon -->
+                        <i class="fa-solid fa-check"></i>
+
+                        <!-- text -->
+                        <div class="why-choose-boox-text">
+                            <strong>Advance Care</strong>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>
+                    </div>
+
+                    <!-- box 2 -->
+                    <div class="why-choose-box">
+                        <!-- icon -->
+                        <i class="fa-solid fa-check"></i>
+
+                        <!-- text -->
+                        <div class="why-choose-boox-text">
+                            <strong>Advance Care</strong>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>
+                    </div>
+                    <!-- box 3 -->
+                    <div class="why-choose-box">
+                        <!-- icon -->
+                        <i class="fa-solid fa-check"></i>
+
+                        <!-- text -->
+                        <div class="why-choose-boox-text">
+                            <strong>Advance Care</strong>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>
+                    </div>
+
+                    <!-- box 4 -->
+                    <div class="why-choose-box">
+                        <!-- icon -->
+                        <i class="fa-solid fa-check"></i>
+
+                        <!-- text -->
+                        <div class="why-choose-boox-text">
+                            <strong>Advance Care</strong>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- boutton appointement -->
+                <a href="#" class="why-choose-us-btn">Make Appointement</a>
+            </div>
+
+            <!-- right -->
+
+            <div class="why-choose-us-right">
+                <h3>
+                    Emmergency? <br/>
+                    Contact Us
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, nihil. Beatae aperiam accusantium nesciunt atque sed illum? Quam voluptate, beatae, Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, nihil. Beatae aperiam accusantium nesciunt atque sed illum? Quam voluptate, beatae</p>
+
+                <!-- container -->
+                <div class="w-right-contact-container">
+                    <!-- box -->
+                    <div class="w-right-contact-box">
+                        <!-- icon -->
+                        <i class="fa-solid fa-phone"></i>
+                        <!-- text -->
+                        <div class="w-right-contact-box-text">
+                            <span>Call Us Now</span>
+                            <strong>+243 850847525</strong>
+                        </div>
+                
+                    </div>
+                    <!-- end box  -->
+                    <!-- box 2 -->
+                        <div class="w-right-contact-box">
+                            <!-- icon -->
+                            <i class="fa-solid fa-envelope"></i>
+                            <!-- text -->
+                            <div class="w-right-contact-box-text">
+                                <span>Our mail</span>
+                                <strong>info@afiambele.org</strong>
+                            </div>
+                    
+                        </div>
+                        <!-- end box  -->
+                </div>
+                <!-- end container -->
+            </div>
+
+        </section>
 
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
