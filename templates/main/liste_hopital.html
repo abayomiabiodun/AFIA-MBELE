@@ -16,25 +16,24 @@
 	
 
 	<section class="page-section">
-		<div class="container-hospital">
+		<div class="hospital-list">
 			<div class="row card">
 
-				<div class="filter-section card">
+				<div class="side-part card">
 
 
-					<h2 class="blog-sidebar-title"><b>Categories</b></h2>
+					<h2 class="categorie-title"><b>Categories</b></h2>
 					<hr />
 
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Coffee</b></p>
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Green Coffee</b></p>
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Nigerian</b></p>
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Roasted Coffee</b></p>
-					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Uncategorized</b></p>
+					<p class="categorie-element"><b><span class="list-icon"> > </span> Clinic</b></p>
+					<p class="categorie-element"><b><span class="list-icon"> > </span> Hospital</b></p>
+					<p class="categorie-element"><b><span class="list-icon"> > </span> Dispensary </b></p>
+					<p class="categorie-element"><b><span class="list-icon"> > </span> Drugstore </b></p>
+					<p class="categorie-element"><b><span class="list-icon"> > </span> Uncategorized</b></p>
 
 					<div>&nbsp;</div>
-					<div>&nbsp;</div>
 
-					<h2 class="blog-sidebar-title"><b>Filter</b></h2>
+					<h2 class="categorie-title"><b>Filter</b></h2>
 					<hr />
 
 					<div class="input-group mb-3">
@@ -45,7 +44,6 @@
 						
 					</div>
 
-					<p class="tags">Price $4 - $25</p>
 					<button type="button" class="btn btn-dark btn-lg">Filter</button>
 
 					<div>&nbsp;</div>
@@ -54,8 +52,8 @@
 				</div>
 				<!--END  <div class="col-lg-3 blog-form">-->
 
-				<div class="col-lg-9" style="padding-left: 30px;">
-					<div class="rows card">
+				<div class="hospital-element-container">
+					<div class="hospital-elements card">
 						<div class="col">
 							Showing all 9 results
 						</div>
@@ -73,54 +71,56 @@
 
 					</div>
 					
-					<div class="why-choose-box-container card">
+					<div class="hospital-box-container card">
 
-						<!-- box -->
-						<div class="why-choose-box">
+						<div class="service-box s-box6 card">
 							<!-- icon -->
-							<i class="fa-solid fa-check"></i>
+							<i class="fa-solid fa-tooth"></i>
 		
-							<!-- text -->
-							<div class="why-choose-boox-text">
-								<strong>Advance Care</strong>
-								<p>Lorem ipsum dolor sit</p>
-							</div>
+							<!-- title -->
+							<strong>Dental Clinic</strong>
+							<!-- details -->
+							<p>Lorem ipsum dolor sit, amet consectetur </p>
+		
+							<!-- btn -->
+		
+							<a href="#">Read More</a>
+		
 						</div>
-		
-						<!-- box 2 -->
-						<div class="why-choose-box">
+
+						<div class="service-box s-box6 card">
 							<!-- icon -->
-							<i class="fa-solid fa-check"></i>
+							<i class="fa-solid fa-tooth"></i>
 		
-							<!-- text -->
-							<div class="why-choose-boox-text">
-								<strong>Advance Care</strong>
-								<p>Lorem ipsum dolor sit</p>
-							</div>
+							<!-- title -->
+							<strong>Dental Clinic</strong>
+							<!-- details -->
+							<p>Lorem ipsum dolor sit, amet consectetur </p>
+		
+							<!-- btn -->
+		
+							<a href="#">Read More</a>
+		
 						</div>
-						<!-- box 3 -->
-						<div class="why-choose-box">
+
+						{% for hospital in Organizations %}
+						<div class="service-box s-box6 card">
 							<!-- icon -->
-							<i class="fa-solid fa-check"></i>
+							<i class="fa-solid fa-tooth"></i>
 		
-							<!-- text -->
-							<div class="why-choose-boox-text">
-								<strong>Advance Care</strong>
-								<p>Lorem ipsum dolor sit</p>
-							</div>
+							<!-- title -->
+							<strong>{{hospital.organization_name}}</strong>
+							<!-- details -->
+							<p>Lorem ipsum dolor sit, amet consectetur </p>
+		
+							<!-- btn -->
+		
+							<a href="#">Read More</a>
+		
 						</div>
-		
-						<!-- box 4 -->
-						<div class="why-choose-box">
-							<!-- icon -->
-							<i class="fa-solid fa-check"></i>
-		
-							<!-- text -->
-							<div class="why-choose-boox-text">
-								<strong>Advance Care</strong>
-								<p>Lorem ipsum dolor sit</p>
-							</div>
-						</div>
+
+						{% endfor %}
+
 					</div>
 					<!-- Sorting by <div class="row"> -->
 
