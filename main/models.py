@@ -22,11 +22,19 @@ class Service(TimespantedModel):
     service_type = models.CharField(default="Health_care", max_length=45, choices=SERVICE_TYPE, blank=True, null=True)  
     objects = models.Manager()
     
+      
+    def __str__(self):
+       return self.service_name
+    
 class Domain(TimespantedModel):
     id=models.AutoField(primary_key=True)
     domain_name = models.CharField(max_length=40)
     domain_description = models.TextField(blank=True)
     objects = models.Manager()
+    
+      
+    def __str__(self):
+       return self.domain_name
     
 class Organization(TimespantedModel):
     ORGANIZATION_TYPE=(
@@ -83,7 +91,8 @@ class Patient(TimespantedModel):
     
     objects = models.Manager()
 
-
+    def __str__(self):
+       return self.user
 
     
 @receiver(post_save, sender=Users)

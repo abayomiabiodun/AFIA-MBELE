@@ -9,8 +9,8 @@ class TimespantedModel(models.Model) :
 
 class Users(AbstractUser):
     user_type_data = (
-                        (1,"Admin"), 
-                        (2,"Organization Admin"), 
-                        (3,"Patients"), 
-                        (4, "Doctors"))
-    user_type = models.CharField(default=1, choices=user_type_data, max_length=10)
+                        ("Admin","Admin"), 
+                        ("Organization Admin","Organization Admin"), 
+                        ("Patients","Patients"), 
+                        ("Doctors", "Doctors"))
+    user_type = models.CharField(default="Admin", choices=user_type_data, max_length=25)

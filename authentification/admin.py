@@ -5,10 +5,10 @@ from django.contrib.auth.admin import UserAdmin
 
 from .models import Users
 
-class UserModel(UserAdmin):
-    pass
+# class UserModel(UserAdmin):
+#     pass
 
-admin.site.register(Users, UserModel)
+# admin.site.register(Users,UserModel)
 
 
-# admin.site.register(Users)
+admin.site.register(Users)

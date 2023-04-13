@@ -16,10 +16,63 @@ ul{
     list-style: none;
 }
 
+:root {
+    /* =====>>  Font Color  <<===== */
+    --f1-color: #fff;
+    --f2-color: #000;
+    --f3-color: rgba(0, 0, 0, 0.8);
+    --f4-color: rgba(0, 0, 0, 0.6);
+    --f5-color: #0099cc;
+    --f6-color: #88cee6;
+  
+    /* =====>>  Background Color  <<===== */
+    --bg1-color: #fff;
+    --bg2-color: #000;
+    --bg3-color: #33ccff;
+    --bg4-color: #33cc33;
+    --bg5-color: #0099cc;
+    --bg6-color: rgba(0, 0, 0, 0.4);
+    --bg7-color: rgba(0, 0, 0, 0.2);
+    --glass-bg: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.3)
+    );
+    --C-lg-bg: linear-gradient(45deg, #ff3399, #ff9933);
+  
+    /* ===== =====>>  Font Size  <<===== =====  */
+    --xxxl-fs: 2.2rem;
+    --xxl-fs: 1.8rem;
+    --xl-fs: 1.6rem;
+    --l-fs: 1.4rem;
+    --m-fs: 1.2rem;
+    --s-fs: 1.1rem;
+    --xs-fs: 1rem;
+  
+    /* =====>>  Margin  <<===== */
+    --m-2-5: 2.5rem;
+    --m-1-8: 1.8rem;
+    --m-1-5: 1.5rem;
+    --m-0-6: 0.6rem;
+    --m-0-5: 0.5rem;
+    --m-0-3: 0.3rem;
+  
+    /* =====>>  Padding  <<===== */
+    --p-2-5: 2.5rem;
+    --p-1-5: 1.5rem;
+    --p-1-0: 1rem;
+    --p-0-8: 0.8rem;
+    --p-0-5: 0.5rem;
+    --p-0-4: 0.4rem;
+    --p-0-3: 0.3rem;
+  }
+  
+
 /* hero section */
 
 #hero{
     background-color: #f5f7fb;
+    background-image: url("../images/footer_map.png");
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -117,7 +170,7 @@ ul{
 .hero-text{
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    /* margin-top: 0px; */
 }
 
 .hero-text h1{
@@ -720,4 +773,128 @@ ul{
     color: #ffffff;
     font-weight: 600;
 
+}
+
+#team{
+    max-width: 1200px;
+    width: 90%;
+    margin: 80px auto;
+}
+
+.team-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.team-heading h3{
+    font-size: 2.4rem;
+    color: #122853;
+}
+
+.team-heading p{
+    font-size: 0.9rem;
+    color: #535353;
+    letter-spacing: 0.3px;
+}
+
+.team-box-container{
+    width: 100%;
+    margin-top: 40px;
+}
+.team-box{
+    max-width: 300px;
+    /* display: flex;
+    flex: column; */
+}
+.team-img{
+    background-color: #f5f7fb; 
+    padding: 10px 10px 0px  10px;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.team-img img{
+    width: 100%;
+    height: 95%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.team-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;   
+    margin-top: 10px;
+}
+.team-text strong{
+    color: #122853;
+}
+
+.team-text span{
+    color: #303030;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+#hero-header{
+    background-color: #f5f7fb;
+    background-image: url("../images/footer_map.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.header-content{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0px auto;
+    padding-bottom: 10px;
+ 
+}
+
+.page-section{
+    width: 100%;
+    background-color: #ffffff;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.container-hospital{
+    max-width: 1200px;
+    margin: 0px auto;
+    width: 90%;
+    margin-top: 20px;
+
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: var(--p-1-5);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+    grid-gap: 1rem;
+    
+}
+
+.rows{
+    
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(3rem);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+    padding: var(--p-1-5);
 }
