@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    'django_extensions',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'formtools',
+    
     'administration.apps.AdministrationConfig',
     'authentification.apps.AuthentificationConfig',
     'hospital.apps.HospitalConfig',
@@ -134,3 +139,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "authentification.Users"
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"

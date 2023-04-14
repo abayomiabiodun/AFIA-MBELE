@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from main.views import RegistrationWizardView as Registration_view
 
 urlpatterns = [
     path('', views.index, name='home'),
-   
+    path('registration/', Registration_view.as_view(), name='registrations'),
     path('ourhospital/', include('main.urls')),
     path('admin/', admin.site.urls),
+   
 ]

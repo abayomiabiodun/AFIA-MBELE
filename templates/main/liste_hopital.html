@@ -24,13 +24,14 @@
 
 					<h2 class="categorie-title"><b>Categories</b></h2>
 					<hr />
-
-					<p class="categorie-element"><b><span class="list-icon"> > </span> Clinic</b></p>
-					<p class="categorie-element"><b><span class="list-icon"> > </span> Hospital</b></p>
-					<p class="categorie-element"><b><span class="list-icon"> > </span> Dispensary </b></p>
-					<p class="categorie-element"><b><span class="list-icon"> > </span> Drugstore </b></p>
-					<p class="categorie-element"><b><span class="list-icon"> > </span> Uncategorized</b></p>
-
+					<ul>
+						<li class="categorie-element"> Clinic</li>
+						<li class="categorie-element"> Hospital</li>
+						<li class="categorie-element"> Dispensary</li>
+						<li class="categorie-element"> Drugstore</li>
+						<li class="categorie-element"> Uncategorized</li>
+					</ul>
+					
 					<div>&nbsp;</div>
 
 					<h2 class="categorie-title"><b>Filter</b></h2>
@@ -73,35 +74,6 @@
 					
 					<div class="hospital-box-container card">
 
-						<div class="service-box s-box6 card">
-							<!-- icon -->
-							<i class="fa-solid fa-tooth"></i>
-		
-							<!-- title -->
-							<strong>Dental Clinic</strong>
-							<!-- details -->
-							<p>Lorem ipsum dolor sit, amet consectetur </p>
-		
-							<!-- btn -->
-		
-							<a href="#">Read More</a>
-		
-						</div>
-
-						<div class="service-box s-box6 card">
-							<!-- icon -->
-							<i class="fa-solid fa-tooth"></i>
-		
-							<!-- title -->
-							<strong>Dental Clinic</strong>
-							<!-- details -->
-							<p>Lorem ipsum dolor sit, amet consectetur </p>
-		
-							<!-- btn -->
-		
-							<a href="#">Read More</a>
-		
-						</div>
 
 						{% for hospital in Organizations %}
 						<div class="service-box s-box6 card">
@@ -111,11 +83,13 @@
 							<!-- title -->
 							<strong>{{hospital.organization_name}}</strong>
 							<!-- details -->
-							<p>Lorem ipsum dolor sit, amet consectetur </p>
+							<p>{{hospital.township}} </p>
+							<p>{{hospital.town}} </p>
+							<p>{{hospital.country}} </p>
 		
 							<!-- btn -->
-		
-							<a href="#">Read More</a>
+						
+							<a href="#">View Details</a>
 		
 						</div>
 

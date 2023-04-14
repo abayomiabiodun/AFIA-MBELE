@@ -4,7 +4,6 @@ from django.contrib import admin
 
 from .models import *
 
-admin.site.register(Domain)
 admin.site.register(Service)
 admin.site.register(Organization)
 admin.site.register(Patient)

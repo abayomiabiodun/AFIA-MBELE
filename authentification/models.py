@@ -8,9 +8,17 @@ class TimespantedModel(models.Model) :
         abstract = True
 
 class Users(AbstractUser):
-    user_type_data = (
-                        ("Admin","Admin"), 
-                        ("Organization Admin","Organization Admin"), 
-                        ("Patients","Patients"), 
-                        ("Doctors", "Doctors"))
-    user_type = models.CharField(default="Admin", choices=user_type_data, max_length=25)
+    class UserTypeData(models.TextChoices):
+        ADMIN = "Admin"
+        ORGANIZATION = "Organization"
+        PATIENT = "Patient"
+        DOCTOR = "Doctor"
+   
+    user_type = models.CharField(default=UserTypeData.ADMIN, choices=UserTypeData.choices, max_length=25)
+    
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def __str__(self):
+        return self.full_name
