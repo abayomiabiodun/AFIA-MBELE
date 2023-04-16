@@ -25,8 +25,17 @@ SECRET_KEY = 'django-insecure-=wi*7k^63*jq^uykilr!a%acj6sbk9$so8-q!)z_n8m8macsi$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000'
+    'https://afia.azurewebsites.net'
+],
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','afia.azurewebsites.net','afia-mbele.azurewebsites.net']
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
+    'https://afia.azurewebsites.net'
+]
 
 # Application definition
 
