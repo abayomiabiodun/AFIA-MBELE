@@ -21,7 +21,7 @@ def show_organization_form(wizard):
     return cleaned_data.get('choice')
 
 class RegistrationWizardView(SessionWizardView):
-    form_list = [IdentityCheckForm, PatientForm,UserForm]
+    form_list = [IdentityCheckForm, PatientForm, UserForm]
     template_name = 'main/registration.html'
 
     def done(self, form_list,**kwargs):

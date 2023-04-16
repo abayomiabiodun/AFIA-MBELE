@@ -26,20 +26,22 @@ SECRET_KEY = 'django-insecure-=wi*7k^63*jq^uykilr!a%acj6sbk9$so8-q!)z_n8m8macsi$
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000'
-    'https://afia.azurewebsites.net'
-],
+    'http://localhost:8000',
+    'https://afia.azurewebsites.net',
+]
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','afia.azurewebsites.net','afia-mbele.azurewebsites.net']
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
-    'https://afia.azurewebsites.net'
+    'https://afia.azurewebsites.net',
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -155,3 +157,37 @@ AUTH_USER_MODEL = "authentification.Users"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# jet theme
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]
