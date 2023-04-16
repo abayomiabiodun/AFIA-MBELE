@@ -20,6 +20,7 @@ from main.views import RegistrationWizardView as Registration_view
 
 urlpatterns = [
     path('', views.index, name='home'),
+    path('authentification/', include('authentification.urls')),
     path('registration/', Registration_view.as_view(), name='registrations'),
     path('ourhospital/', include('main.urls')),
     path('admin/', admin.site.urls),

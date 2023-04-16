@@ -10,10 +10,14 @@
 
 a{
     text-decoration: none;
+   
 }
+
 
 ul{
     list-style: none;
+    margin-bottom:0;
+    padding-left: 0;
 }
 
 :root {
@@ -92,14 +96,14 @@ ul{
     padding: 30px 0px;
 }
 
-.logo{
+.logos{
     color: #122853;
     font-weight: 700;
     font-size: 1.4rem;
 
 }
 
-.logo span{
+.logos span{
    background-color: #014dd5;
    color: #ffffff;
    padding: 0px 5px;
@@ -109,22 +113,24 @@ ul{
 }
 
 
-.menu{
+.menus{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: auto;
     margin-left: 40px;
+
+   
 }
 
-.menu li a{
+.menu-link{
+  
     margin: 0px 20px;
     color: #303030;
     font-weight: 500;
     transition: all ease 0.3s;
 }
-
-.menu li a:hover{
+.menu-link:hover{
     color: #014dd5;
 }
 
@@ -139,8 +145,13 @@ ul{
     font-weight: 500;
     letter-spacing: 1px;
     font-size: 1rem;
+  
 }
 
+.nav-appointement-btn:hover{
+    background-color: #122853;
+    color: #ffffff;
+}
 
 /* hero content */
 
@@ -929,4 +940,8 @@ ul{
     background-color: transparent;
     border: none;
     outline: none;  
+}
+
+.cols{
+    margin-top: 20px;
 }

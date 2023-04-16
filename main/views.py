@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from main.models import Organization, Service, Patient
 
 from formtools.wizard.views import SessionWizardView
-from main.forms import IdentityCheckForm, PatientForm
+from main.forms import IdentityCheckForm, PatientForm,UserForm
 # Create your views here.
 
 def list_hospital(request):
@@ -21,10 +21,10 @@ def show_organization_form(wizard):
     return cleaned_data.get('choice')
 
 class RegistrationWizardView(SessionWizardView):
-    form_list = [IdentityCheckForm]
+    form_list = [IdentityCheckForm, PatientForm,UserForm]
     template_name = 'main/registration.html'
-    condition_dict={'1': show_organization_form}
+
     def done(self, form_list,**kwargs):
-        check_form = form_list[0]
+        print(form_list)
         return HttpResponse("Form submitted successfully")
 

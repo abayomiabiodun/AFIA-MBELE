@@ -1,0 +1,4 @@
+django==4.1.4
+django-extensions
+crispy-bootstrap5
+django-formtools==2.3
