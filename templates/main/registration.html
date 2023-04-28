@@ -33,10 +33,10 @@
                 {% endif %}
             </table>
             {% if wizard.steps.prev %}
-                <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}" class="button">{% trans "first step" %}</button>
-                <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="button">{% trans "prev step" %}</button>
+                <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.first }}" class="btn btn-dark btn-lg">{% trans "first step" %}</button>
+                <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="btn btn-dark btn-lg">{% trans "prev step" %}</button>
             {% endif %}
-            <input type="submit" value="{% trans "submit" %}" class="button"/>
+            <input type="submit" value="{% trans "submit" %}" class="btn btn-dark btn-lg"/>
             </form>
     </div>
 </section> 

@@ -61,11 +61,11 @@
                 </div>
                 <div class="card-body">
 
-                  <form role="form" action="doLogin/" method="POST">
+                  <form role="form" action="login/" method="POST">
                     {% csrf_token %}
-                    <label>Email</label>
+                    {% comment %} <label>Email</label>
                     <div class="mb-3">
-                      <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
+                      <input type="input" class="form-control" name="email" placeholder="Usernaùe" aria-label="Username" aria-describedby="username-addon">
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
@@ -75,7 +75,8 @@
                       <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
-                
+                 {% endcomment %}
+                    {{form}}
                     <div class="text-center">
                       <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Connexion</button>
                     </div>
@@ -116,10 +117,7 @@
   </footer>
   <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
   <!--   Core JS Files   -->
-  <script src="{% static 'assets/js/core/popper.min.js' %}"></script>
-  <script src="{% static 'assets/js/core/bootstrap.min.js'  %}"></script>
-  <script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js'  %}"></script>
-  <script src="{% static 'assets/js/plugins/smooth-scrollbar.min.js'  %}"></script>
+
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

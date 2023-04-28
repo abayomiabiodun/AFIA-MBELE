@@ -2,16 +2,19 @@
     <!-- nav -->
 
         <nav class="navigation">
-
+            <input type="checkbox" class="menus-btn" id="menus-btn">
+            <label for="menus-btn" class="menus-icon">
+                <span class="nav-icon"></span>    
+            </label>
             <!-- logo -->
-            <a href="#" class="logos"> <span>Afia</span> Mbele</a>
+            <a href="{% url 'home' %}" class="logos"> <span>Afia</span> Mbele</a>
 
             <!-- menu -->
 
             <ul class="menus">
                 <li><a href="{% url 'listhospital' %}" class="menu-link">Find Hospital</a></li>
-                <li><a href="#" class="menu-link">Best Insurrance</a></li>
-                <li><a href="#" class="menu-link">Emmergency</a></li>
+                <li><a href="{% url 'providers' %}" class="menu-link">Best Insurrance</a></li>
+                <li><a href="#" class="menu-link">Emergency</a></li>
                
             </ul>
 

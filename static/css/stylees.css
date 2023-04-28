@@ -816,12 +816,12 @@ ul{
     margin-top: 40px;
 }
 .team-box{
-    max-width: 300px;
+    max-width: 100%;
     /* display: flex;
-    flex: column; */
+    flex: column;  */
 }
 .team-img{
-    background-color: #f5f7fb; 
+   
     padding: 10px 10px 0px  10px;
     height: 300px;
     display: flex;
@@ -853,10 +853,13 @@ ul{
     font-size: 0.9rem;
     margin-top: 5px;
 }
+.swiper-pagination{
+    position: static !important;
+}
 
 #hero-header{
     background-color: #f5f7fb;
-    background-image: url("../images/footer_map.png");
+    background-image: url("../image/footer_map.png");
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -944,4 +947,204 @@ ul{
 
 .cols{
     margin-top: 20px;
+}
+
+/* resposnsive */
+
+.menus-btn{
+    display: none;
+}
+@media(max-width:1050px){
+    .hero-content{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 40px auto;
+    }
+    .hero-text{
+        margin-bottom: 40px;
+        background-color: #ffffff;
+        padding: 30px;
+        margin-top: 0px;
+    }
+} 
+
+@media(max-width:950px){
+    .navigation{
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        position: relative;
+    }
+    .logos,
+    .nav-appointement-btn{
+        z-index: 103;
+    }
+    .logos{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .menus{
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        box-shadow: 2px 30px 30px rgba(0, 0, 0, 0.06);
+        top: 100%;
+        left: 0px;
+    }
+    .menus::after{
+        content:'';
+        position: absolute;
+        left: 0px;
+        top: -100%;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menus li{
+        width: 100%;
+        margin:0px;
+        padding:0px;
+
+    }
+    .menus li a{
+        width: 100%;
+        display:flex;
+        align-items:30px 20px;
+        padding: 0px 20px;
+        margin: 0px;
+        height: 45px;
+
+    }
+
+    .menus-icon{
+        cursor : pointer;
+        float: right;
+        padding: 10px 0px;
+        position: relative;
+        user-select: none;
+        z-index: 106;
+    }
+
+    .menus-icon .nav-icon{
+        background-color: #181818;
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 25px;
+        transition: all ease-out 0.2s;
+    }
+
+    .menus-icon .nav-icon::before,
+    .menus-icon .nav-icon::after{
+        background-color: #181818;
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: all ease-out 0.2s;
+    }
+    .menus-icon .nav-icon::before{
+        top: 9px;
+    }
+    .menus-icon .nav-icon::after{
+        top: -9px;
+    }
+
+    .menus-btn:checked ~ .menus-icon .nav-icon::before{
+        transform: rotate(-45deg);
+        top: 0px;
+    }
+    .menus-btn:checked ~ .menus-icon .nav-icon::after{
+        transform: rotate(45deg);
+        top: 0px;
+    }
+
+    .menus-btn:checked ~ .menus-icon .nav-icon{
+       background-color: transparent;
+    }
+
+    .menus-btn:checked ~ .menus{
+        display: block;
+    }
+
+    .what-we-provide{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    #our-story{
+        grid-template-columns: 1fr;
+    }
+    .our-story-img{
+        max-height: 400px;
+    }
+    .our-story-text{
+        padding: 30px;
+    }
+    #why-choose-us{
+        grid-template-columns: 1fr;
+    }
+
+    .row{
+        grid-template-columns: 1fr;
+    }
+    .hospital-box-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:620px){
+    .hero-text{
+        padding: 20px;
+    }
+
+    .hero-text h1,
+    .our-story-text h2,
+    .services-heading h2,
+    .why-choose-us-left h3,
+    .why-choose-us-right h3,
+    .team-heading h3{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .hero-text-btns{
+        flex-direction: column;
+    }
+
+    .hero-text-btns a{
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .appointment-search{
+        grid-template-columns: 1fr;
+    }
+    .appointment-search button{
+        height: 45px;
+    }
+
+    .what-we-provide{
+        grid-template-columns: 1fr;
+    }
+
+    .our-story-text{
+        padding: 20px 15px;
+    }
+    .story-number-box strong{
+        font-size: 1.4rem;
+    }
+
+    .why-choose-us-left,
+    .why-choose-us-right{
+        padding: 30px 20px;
+    }
+
+    .why-choose-box-container{
+        grid-template-columns: 1fr;
+    }
 }

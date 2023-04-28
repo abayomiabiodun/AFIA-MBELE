@@ -1,0 +1,106 @@
+{% extends 'base/layout/base.html' %}
+{% load static %}
+
+{% block style %}
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{% include 'base/partials/_header.html' with name="Organisation" cible="Health insurance provider" %}
+
+	
+
+	<section class="page-section">
+		<div class="hospital-list">
+			<div class="row card">
+
+				<div class="side-part card">
+
+
+					<h2 class="categorie-title"><b></b> Provider Type</h2>
+					<hr />
+					<ul>
+						<li class="categorie-element"> Personal provider </li>
+						<li class="categorie-element"> Compagny provider</li>
+						<li class="categorie-element"> Family provider</li>
+						<li class="categorie-element"> Gorvnment</li>
+						<li class="categorie-element"> All</li>
+					</ul>
+					
+					<div>&nbsp;</div>
+
+					<h2 class="categorie-title"><b>Filter</b></h2>
+					<hr />
+
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Search" aria-label="Receipient's username" aria-describely="basic-addon2">
+						<div class="btn btn-dark btn-lg">
+							<span class="btn btn-dark btn-lg"><i class="fa fa-search"></i></span>
+						</div>
+						
+					</div>
+					<div>&nbsp;</div>
+			
+				</div>
+				<!--END  <div class="col-lg-3 blog-form">-->
+
+				<div class="hospital-element-container">
+					<div class="hospital-elements card">
+						<div class="cols">
+							Found result
+						</div>
+
+						<div class="col">
+							<select class="form-control">
+								<option value="">Default Sorting</option>
+								<option value="popularity">Sorting by popularity</option>
+								<option value="average">Sorting by average</option>
+								<option value="latest">Sorting by latest</option>
+								<option value="low">Sorting by low</option>
+								<option value="high">Sorting by high</option>
+							</select>
+						</div>
+
+					</div>
+					
+					<div class="hospital-box-container card">
+
+
+						{% for provider in Organizations %}
+						<div class="service-box s-box6 card">
+							<!-- icon -->
+							<i class="fa-solid fa-tooth"></i>
+		
+							<!-- title -->
+							<strong>{{provider.organization_name}}</strong>
+							<!-- details -->
+							<p>{{hospital.township}} </p>
+							<p>{{hospital.town}} </p>
+							<p>{{hospital.country}} </p>
+		
+							<!-- btn -->
+						
+							<a href="#">View Details</a>
+		
+						</div>
+
+						{% endfor %}
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+				</div>
+				<!--END  <div class="col-lg-9">-->
+
+			</div>
+		</div>
+	</section>
+
+
+
+   
+{% endblock %}
