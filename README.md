@@ -64,12 +64,19 @@ Strong teamwork and execution under pressure
 - Scaling across multiple African countries
 
 🧰 Built With
+
 🟦 Azure
+
 🐍 Python
+
 🌐 Django
+
 🐘 PostgreSQL
+
 🎨 HTML
+
 🎨 CSS
+
 🤝 Team
 
 Built with passion by Team Brainiacs
